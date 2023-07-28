@@ -1,0 +1,99 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+.logo_container {
+  margin-right: 24px;
+}
+.logo {
+  font-size: larger;
+  color: wheat;
+  text-transform: uppercase;
+  font-size: large;
+}
+.menu_items {
+  display: flex;
+  column-gap: 15px;
+}
+
+.menu_items a {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.line {
+  height: 5px;
+  margin: 10px 0;
+  background: #000;
+}
+
+.button {
+  color: white;
+  background-color: rgb(105, 10, 105);
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: #000;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+}
+
+.dropdown_content > a {
+  color: black;
+  display: block;
+  font-size: small;
+}
+
+/* Additional Styles for Mobile Menu */
+.mobilemenu {
+  display: none;
+}
+
+/* Media Query for Mobile Menu */
+@media (max-width: 800px) {
+  .mobilemenu {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .menu_items {
+    display: flex;
+    flex-direction: column;
+    background-color: #001529;
+    padding: 10px;
+    position: absolute;
+    top: 64px; /* Adjust this value based on your Header height */
+    left: 0;
+    width: 100%;
+  }
+
+  .ant-menu-vertical {
+    display: block;
+  }
+
+  .menu_items a {
+    margin-bottom: 10px;
+  }
+  .logo {
+    font-size: small;
+  }
+}
