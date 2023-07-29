@@ -38,7 +38,7 @@ const RootLayout = ({ children }) => {
         </div>
 
         {showMobileMenu && (
-          <Menu
+          <items
             theme="dark"
             // mode={showMobileMenu ? "vertical" : "horizontal"}
             mode={"vertical"}
@@ -58,13 +58,13 @@ const RootLayout = ({ children }) => {
               <ul className={styles.dropdown_content}>
                 <Link href={"/catagories/cpu"}>Cpu</Link>
                 <Link href={"/catagories/motherboard"}>Motherboard</Link>
-                <Link href={"/catagories/power"}>Power Supply Unit</Link>
+                <Link href={"/catagories/powerSupply"}>Power Supply Unit</Link>
                 <Link href={"/catagories/storage"}>Storage Device</Link>
                 <Link href={"/catagories/monitor"}>Monitor</Link>
                 <Link href={"/catagories/others"}>Others</Link>
               </ul>
             </div>
-          </Menu>
+          </items>
         )}
 
         <div>
@@ -76,42 +76,11 @@ const RootLayout = ({ children }) => {
 
       <Content
         style={{
-          padding: "0 24px",
           minHeight: "100vh",
         }}
       >
         {children}
       </Content>
-
-      <Footer
-        style={{
-          textAlign: "center",
-        }}
-      >
-        <div className={styles.line}></div>
-        <h2
-          style={{
-            fontSize: "28px",
-          }}
-        >
-          PH-NEWS PORTAL
-        </h2>
-        <p className={styles.social_icons}>
-          <Link href="https://web.facebook.com/groups/programmingherocommunity">
-            <FacebookFilled />
-          </Link>
-          <Link href="www.twitter.com">
-            <TwitterSquareFilled />
-          </Link>
-          <Link href="https://web.programming-hero.com/home/">
-            <GoogleSquareFilled />
-          </Link>
-          <Link href="www.linkedin.com">
-            <LinkedinFilled />
-          </Link>
-        </p>
-        News Portal ©2023 Created by Programming Hero
-      </Footer>
     </Layout>
   );
 };

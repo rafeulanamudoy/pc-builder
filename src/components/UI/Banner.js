@@ -1,175 +1,46 @@
-import { Col, Row, Carousel } from "antd";
-import {
-  ArrowRightOutlined,
-  CalendarOutlined,
-  CommentOutlined,
-  ProfileOutlined,
-} from "@ant-design/icons";
+import { Carousel } from "antd";
 import Image from "next/image";
-import DrawingImage from "@/assests/images/banner-images/drawing_image.jpg";
-import EagleImage from "@/assests/images/banner-images/eagle_image.jpg";
-
+import React from "react";
 const contentStyle = {
-  height: "425px",
-  color: "#000",
+  background: "#364d79",
+  width: "100vw",
+  height: "700px", // Set the width of the container to 100vw
+};
+const Banner = () => {
+  return (
+    <Carousel autoplay>
+      <div>
+        <Image
+          style={contentStyle}
+          src="https://i.ibb.co/XZmP9q0/seller-man-mobile-phone-professional-consultant-tech-store-shop.jpg"
+          objectFit="cover"
+          alt="Picture of the author"
+          height={500}
+          width={500}
+        />
+      </div>
+      <div>
+        <Image
+          style={contentStyle}
+          src="https://i.ibb.co/k6N1wjs/laptop-gc82e5ea51-1280.jpg"
+          objectFit="cover"
+          alt="Picture of the author"
+          height={500}
+          width={500}
+        />
+      </div>
+      <div style={contentStyle}>
+        <Image
+          style={contentStyle}
+          src="https://i.ibb.co/yY6Q14F/nobody-empty-call-center-workstation-with-computers-audio-instruments-no-people-customer-service-off.jpg"
+          objectFit="cover"
+          alt="Picture of the author"
+          height={500}
+          width={500}
+        />
+      </div>
+    </Carousel>
+  );
 };
 
-const Banner = () => (
-  <Carousel effect="fade" autoplay style={{ margin: "20px 0px" }}>
-    {/* slider-1 */}
-    <div>
-      <Row>
-        <Col
-          lg={{
-            span: 8,
-          }}
-        >
-          <h1 style={{ fontSize: "50px" }}>
-            LET&apos;S BUILD
-            <br />
-            YOUR CAREER
-          </h1>
-          <div
-            className="line"
-            style={{
-              height: "5px",
-              margin: "20px 0",
-              background: "#000",
-              width: "95%",
-            }}
-          ></div>
-
-          <p
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "90%",
-              color: "gray",
-              margin: "10px 0px",
-            }}
-          >
-            <span>
-              <CalendarOutlined /> FEBRUARY 28, 2023
-            </span>
-            <span>
-              <CommentOutlined /> NO COMMENTS
-            </span>
-            <span>
-              <ProfileOutlined /> HOBBY
-            </span>
-          </p>
-
-          <p style={{ fontSize: "20px" }}>
-            Beauteous before up across felt sheepishly and more mournfully the
-            wow so more flustered and one up pushed salamander collective
-            blinked that iguanodon bid much some since hey far goodness jaguar
-            whil...
-          </p>
-          <p
-            style={{
-              fontSize: "20px",
-              margin: "20px 0px",
-              backgroundColor: "black",
-              color: "white",
-              width: "168px",
-              padding: "2px 5px ",
-              fontWeight: "300",
-              letterSpacing: "3px",
-            }}
-          >
-            Keep Reading <ArrowRightOutlined />
-          </p>
-        </Col>
-
-        <Col
-          lg={{
-            span: 16,
-          }}
-          style={contentStyle}
-        >
-          <Image src={DrawingImage} fill alt="drawing_image" />
-        </Col>
-      </Row>
-    </div>
-    {/* slider-2 */}
-    <div>
-      <Row>
-        <Col
-          lg={{
-            span: 8,
-          }}
-        >
-          <h1 style={{ fontSize: "50px" }}>
-            EAGLE, YOU ARE
-            <br />
-            NOT ALONE
-          </h1>
-          <div
-            className="line"
-            style={{
-              height: "5px",
-              margin: "20px 0",
-              background: "#000",
-              width: "95%",
-            }}
-          ></div>
-
-          <p
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "90%",
-              color: "gray",
-              margin: "10px 0px",
-            }}
-          >
-            <span>
-              <CalendarOutlined /> MARCH 30, 2023
-            </span>
-            <span>
-              <CommentOutlined /> 5 COMMENTS
-            </span>
-            <span>
-              <ProfileOutlined /> NATURE
-            </span>
-          </p>
-
-          <p style={{ fontSize: "20px" }}>
-            A spread opened patient and compulsively one placed seagull goodness
-            python owing snapped yikes equitable when much the much Lorem ipsum
-            dolor sit, amet consectetur adipisicing elit. Eligendi, tenetur!...
-          </p>
-          <p
-            style={{
-              fontSize: "20px",
-              margin: "20px 0px",
-              backgroundColor: "black",
-              color: "white",
-              width: "168px",
-              padding: "2px 5px ",
-              fontWeight: "300",
-              letterSpacing: "3px",
-            }}
-          >
-            Keep Reading <ArrowRightOutlined />
-          </p>
-        </Col>
-
-        <Col
-          lg={{
-            span: 16,
-          }}
-          style={contentStyle}
-        >
-          <Image
-            src={EagleImage}
-            fill
-            alt="eagle_image"
-            style={{ grayScale: "-1" }}
-          />
-        </Col>
-      </Row>
-    </div>
-  </Carousel>
-);
 export default Banner;

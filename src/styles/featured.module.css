@@ -1,0 +1,38 @@
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  grid-gap: 20px;
+  margin: 15px 15px;
+}
+.grid_items {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  display: flex;
+
+  flex-direction: column;
+}
+.feturedProducts {
+  text-align: center;
+
+  font-size: xx-large;
+  color: rgb(247, 21, 40);
+}
+.product_desc span {
+  font-size: medium;
+  font-weight: 300;
+}
+
+.grid_catgory_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+  grid-gap: 20px;
+  margin: 15px 15px;
+  text-align: center;
+}
+.grid_catgory_container h3 {
+  color: black;
+  font-weight: 900;
+  margin-bottom: 10px;
+}

@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   font-size: small;
+
+  z-index: 2;
 }
 .logo_container {
   margin-right: 24px;
@@ -79,7 +81,7 @@
     display: flex;
     flex-direction: column;
     background-color: #001529;
-    padding: 10px;
+
     position: absolute;
     top: 64px; /* Adjust this value based on your Header height */
     left: 0;
@@ -95,5 +97,7 @@
   }
   .logo {
     font-size: small;
+  }
+  .container {
   }
 }
