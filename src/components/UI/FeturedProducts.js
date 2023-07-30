@@ -1,15 +1,29 @@
 import React from "react";
-import { Card, Col, Image, Row } from "antd";
+import { Button, Image } from "antd";
 import styles from "@/styles/featured.module.css";
-const FeturedProducts = ({ products }) => {
-  console.log(products);
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { getProduct } from "@/redux/features/productSlice";
+const FeturedProducts = (props) => {
+  const router = useRouter();
+  const {
+    query: { message },
+  } = router;
 
-  console.log(products);
+  const { products, header } = props;
+  const dispatch = useDispatch();
+
+  const handleAdd = (product) => {
+    dispatch(getProduct(product));
+    router.push("/pcBuilder");
+  };
+
   return (
     <div>
-      <h1 className={styles.feturedProducts}>Fetured Products</h1>
+      <h1 className={styles.feturedProducts}>{header}</h1>
       <div className={styles.grid_container}>
-        {products.map((product) => {
+        {products?.map((product) => {
           return (
             <div className={styles.grid_items} key={product._id}>
               <Image
@@ -26,15 +40,26 @@ const FeturedProducts = ({ products }) => {
                 Catagory:<span> {product.Category}</span>
               </h3>
               <h3 className={styles.product_desc}>
-                Price:<span> {product.Price}</span>
+                Price:<span> {product.Price}$</span>
               </h3>
               <h3 className={styles.product_desc}>
                 Status:<span> {product.Status}</span>
               </h3>
 
               <h3 className={styles.product_desc}>
-                Rating:<span> {product.Rating}</span>
+                Rating:<span> {product.AverageRating}</span>
               </h3>
+
+              {message === "pcBuilder" ? (
+                <Button onClick={() => handleAdd(product)}>Add</Button>
+              ) : (
+                <Link
+                  href={`/productDetails/${product._id}`}
+                  className={styles.productButton}
+                >
+                  Details
+                </Link>
+              )}
             </div>
           );
         })}

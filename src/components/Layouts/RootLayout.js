@@ -38,22 +38,24 @@ const RootLayout = ({ children }) => {
         </div>
 
         {showMobileMenu && (
-          <items
+          <div
             theme="dark"
             // mode={showMobileMenu ? "vertical" : "horizontal"}
             mode={"vertical"}
             className={styles.menu_items}
-            onClick={handleMobileMenuToggle}
           >
+            <Link href="/">
+              <div>Home</div>
+            </Link>
             <Link href="/register">
-              <items>Register</items>
+              <div>Register</div>
             </Link>
             <Link href="/login">
-              <items>Login</items>
+              <div>Login</div>
             </Link>
             <div className={styles.dropdown}>
               <Link href="#">
-                <items>Catagories</items>
+                <div>Catagories</div>
               </Link>
               <ul className={styles.dropdown_content}>
                 <Link href={"/catagories/cpu"}>Cpu</Link>
@@ -64,11 +66,11 @@ const RootLayout = ({ children }) => {
                 <Link href={"/catagories/others"}>Others</Link>
               </ul>
             </div>
-          </items>
+          </div>
         )}
 
         <div>
-          <Link href="/pc-build">
+          <Link href="/pcBuilder">
             <Button className={styles.button}>Pc Builder</Button>
           </Link>
         </div>

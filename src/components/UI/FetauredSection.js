@@ -19,7 +19,7 @@ const FetauredSection = () => {
           <Image src="https://i.ibb.co/BNRH0NS/storage.png" alt="storege" />
           <h3>Storege</h3>
         </Link>
-        <Link href={"/catagories/ram"}>
+        <Link href={"/catagories/ram?message=featureSection"}>
           <Image src="https://i.ibb.co/ZBYzshj/ram-memory.png" alt="ram" />
           <h3>Ram</h3>
         </Link>
@@ -30,14 +30,14 @@ const FetauredSection = () => {
           />
           <h3>Power Supply</h3>
         </Link>
-        <Link className={styles.grid_items} href={"/catagories/mohterboard"}>
+        <Link className={styles.grid_items} href={"/catagories/motherboard"}>
           <Image
             src="https://i.ibb.co/CBP30jm/motherboard.png"
             alt="motherboard"
           />
           <h3>MotherBoard</h3>
         </Link>
-        <Link className={styles.grid_items} href={"/catagories/cpu"}>
+        <Link className={styles.grid_items} href={"/catagories/cpu/"}>
           <Image src="https://i.ibb.co/6NdR8zJ/cpu.png" alt="cpu" />
           <h3>Cpu</h3>
         </Link>

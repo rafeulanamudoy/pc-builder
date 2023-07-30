@@ -15,7 +15,7 @@ export default function Home({ products }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
-      <FeturedProducts products={products} />
+      <FeturedProducts products={products} header={"Featured Products"} />
       <FetauredSection />
       <div>h2</div>
     </div>
@@ -26,9 +26,16 @@ Home.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
+  // if (typeof window === "undefined") {
+  //   return {
+  //     props: {
+  //       product: [],
+  //     },
+  //   };
+  // }
+  const res = await fetch(`${process.env.URL}/api/products`);
   const data = await res.json();
-  console.log(data);
+
   return {
     props: {
       products: data.data,

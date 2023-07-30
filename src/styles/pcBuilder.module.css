@@ -1,0 +1,32 @@
+.pcContainer {
+  width: 70vw;
+  margin: 30px auto;
+  grid-gap: 50px;
+  display: grid;
+
+  border: 2px solid red;
+  font-size: larger;
+}
+
+.items {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 6fr 1fr;
+  grid-template-rows: auto 40px;
+  margin: 30px 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.completeButton {
+  border: none;
+  width: 20%;
+  justify-self: center;
+  background-color: rgb(85, 8, 8);
+  color: white;
+  line-height: 30px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: 900;
+  cursor: pointer;
+}

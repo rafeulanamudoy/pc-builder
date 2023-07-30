@@ -1,0 +1,101 @@
+.productContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  margin-top: 30px;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(194, 32, 32, 0.07) 0px 8px 16px,
+    rgba(16, 202, 26, 0.07) 0px 16px 32px,
+    rgba(104, 56, 56, 0.616) 0px 32px 64px;
+}
+.productDesc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  font-size: large;
+}
+.productDesc span {
+  border: 1px solid burlywood;
+  background-color: beige;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.productHeader {
+  text-align: center;
+  color: rgb(207, 38, 38);
+  font-size: xx-large;
+}
+.featureHeader {
+  color: rgb(73, 4, 50);
+  font-size: x-large;
+  margin-top: 5px;
+}
+.feature {
+  display: block;
+  font-size: larger;
+  margin: 10px 0;
+  font-weight: 600;
+}
+.userReveiw {
+  display: grid;
+  gap: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(167, 156, 156, 0.09) 0px 16px 8px,
+    rgba(158, 126, 126, 0.09) 0px 32px 16px;
+}
+.description {
+  font-size: large;
+  color: orangered;
+}
+@media only screen and (min-width: 950px) and (max-width: 1500px) {
+  .productDesc {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .description {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 950px) {
+  .productDesc {
+    grid-template-columns: 1fr;
+    font-size: medium;
+  }
+  .productHeader {
+    font-size: medium;
+  }
+  .featureHeader {
+    font-size: small;
+  }
+  .feature {
+    font-size: small;
+  }
+  .productDesc {
+    font-size: small;
+  }
+  .productHeader {
+    font-size: medium;
+  }
+  .featureHeader {
+    font-size: medium;
+  }
+  .userReveiw {
+    font-size: x-small;
+  }
+  .description {
+    font-size: small;
+  }
+}
