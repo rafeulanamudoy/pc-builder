@@ -42,6 +42,21 @@ const ProductDetails = ({ product }) => {
             <span className={styles.description}>Description</span>:
             <span>{product.Description}</span>
           </div>
+          <div>
+            <h1>Individual Product Rating</h1>
+            {Object.keys(product.IndividualRatings).map((property) => {
+              const value = product.IndividualRatings[property];
+
+              return (
+                <div
+                  className={styles.individualRating}
+                  key={Math.floor(Math.random() * 1000)}
+                >
+                  {property}:{value}
+                </div>
+              );
+            })}
+          </div>
           <h1 className={styles.featureHeader}>User Reveiw</h1>
           {product.Reviews.map((reveiw) => {
             return (

@@ -99,3 +99,12 @@
     font-size: small;
   }
 }
+.logOut {
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  background-color: #001529;
+  border: none;
+  cursor: pointer;
+}

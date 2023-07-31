@@ -8,6 +8,7 @@ import {
   TwitterSquareFilled,
   MenuOutlined,
 } from "@ant-design/icons";
+import { useSession, signOut } from "next-auth/react";
 import { Button, Layout, Menu } from "antd";
 const { Header, Content, Footer } = Layout;
 import styles from "@/styles/Header.module.css";
@@ -15,6 +16,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const RootLayout = ({ children }) => {
+  const { data: session } = useSession();
+  console.log("login info", session);
   const [showMobileMenu, setShowMobileMenu] = useState(true);
 
   const handleMobileMenuToggle = () => {
@@ -47,12 +50,7 @@ const RootLayout = ({ children }) => {
             <Link href="/">
               <div>Home</div>
             </Link>
-            <Link href="/register">
-              <div>Register</div>
-            </Link>
-            <Link href="/login">
-              <div>Login</div>
-            </Link>
+
             <div className={styles.dropdown}>
               <Link href="#">
                 <div>Catagories</div>
@@ -66,6 +64,15 @@ const RootLayout = ({ children }) => {
                 <Link href={"/catagories/others"}>Others</Link>
               </ul>
             </div>
+            {session?.user ? (
+              <button onClick={() => signOut()} className={styles.logOut}>
+                Logout
+              </button>
+            ) : (
+              <Link href="/login">
+                <div>Login</div>
+              </Link>
+            )}
           </div>
         )}
 
@@ -83,6 +90,35 @@ const RootLayout = ({ children }) => {
       >
         {children}
       </Content>
+      <Footer
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <div className={styles.line}></div>
+        <h2
+          style={{
+            fontSize: "28px",
+          }}
+        >
+          TECK BEATS
+        </h2>
+        <p className={styles.social_icons}>
+          <Link href="https://web.facebook.com/groups/programmingherocommunity">
+            <FacebookFilled />
+          </Link>
+          <Link href="www.twitter.com">
+            <TwitterSquareFilled />
+          </Link>
+          <Link href="https://web.programming-hero.com/home/">
+            <GoogleSquareFilled />
+          </Link>
+          <Link href="www.linkedin.com">
+            <LinkedinFilled />
+          </Link>
+        </p>
+        TECK BEATS ©2023 Created by RAFEUL ANAM UDOY
+      </Footer>
     </Layout>
   );
 };
