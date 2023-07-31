@@ -1,38 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[TECH BEATS](https://pc-builder-ten-navy.vercel.app/) is a system where user can build pc according their reccoment and can buy necessary pc equipment
 
-## Getting Started
+## TECH BEATS Feature
 
-First, run the development server:
+1.In this system user can buy pc equipment according their need.
+2.In this system user can get this pc equipment catagory.the catagory are:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Cpu/processor
+- Motherboard
+- RAM
+- Power Supply Unit
+- Storage Device
+- Monitor
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  3.In Home page their have some feature products In Feature product section.In product if user click in they can gain the necessary knowledge of that product.they can also show the user rating and also product individual section rating about that product.
+  4.In Home page their have also an catagory section.where user can find the necessary related catagory product.
+  5.In this system user can build pc .if user want to go to the pc builder section he or she must have to authenticate user to this system.after authenticate they can select the necessary catagory product and build their pc.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## How i run this system and what tecnology i used
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1.In development envornment when i run the project the project command is npm run dev.and the production level the project run command is npm start.
+2.For api I use next js api routes.
+3.and for authentication i use next auth next js authentication system.
+4.for state management i use redux toolkit.and for designing mostly use custom css and ant design css library
