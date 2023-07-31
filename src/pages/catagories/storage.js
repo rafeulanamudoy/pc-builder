@@ -17,21 +17,13 @@ export default Storage;
 Storage.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
-// export const getServerSideProps = async () => {
-//   // if (typeof window === "undefined") {
-//   //   return {
-//   //     props: {
-//   //       product: [],
-//   //     },
-//   //   };
-//   // }
+export const getServerSideProps = async () => {
+  const res = await fetch(`${process.env.URL}/api/products/?category=storage`);
+  const data = await res.json();
 
-//   const res = await fetch(`${process.env.URL}/api/products/?category=storage`);
-//   const data = await res.json();
-
-//   return {
-//     props: {
-//       products: data.data,
-//     },
-//   };
-// };
+  return {
+    props: {
+      products: data.data,
+    },
+  };
+};

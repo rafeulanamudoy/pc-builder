@@ -50,7 +50,7 @@ const FeturedProducts = (props) => {
                 Rating:<span> {product?.AverageRating}</span>
               </h3>
 
-              {/* {message === "pcBuilder" ? (
+              {message === "pcBuilder" ? (
                 <Button onClick={() => handleAdd(product)}>
                   Add To Builder
                 </Button>
@@ -61,7 +61,7 @@ const FeturedProducts = (props) => {
                 >
                   Details
                 </Link>
-              )} */}
+              )}
             </div>
           );
         })}
