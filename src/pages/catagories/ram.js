@@ -18,20 +18,20 @@ export default Ram;
 Ram.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
-export const getServerSideProps = async () => {
-  // if (typeof window === "undefined") {
-  //   return {
-  //     props: {
-  //       product: [],
-  //     },
-  //   };
-  // }
-  const res = await fetch(`${process.env.URL}/api/products/?category=ram`);
-  const data = await res.json();
+// export const getServerSideProps = async () => {
+//   // if (typeof window === "undefined") {
+//   //   return {
+//   //     props: {
+//   //       product: [],
+//   //     },
+//   //   };
+//   // }
+//   const res = await fetch(`${process.env.URL}/api/products/?category=ram`);
+//   const data = await res.json();
 
-  return {
-    props: {
-      products: data.data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       products: data.data,
+//     },
+//   };
+// };

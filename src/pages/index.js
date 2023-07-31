@@ -17,7 +17,6 @@ export default function Home({ products }) {
       <Banner />
       <FeturedProducts products={products} header={"Featured Products"} />
       <FetauredSection />
-      <div>h2</div>
     </div>
   );
 }
@@ -25,21 +24,21 @@ export default function Home({ products }) {
 Home.getLayout = function getLayout(page) {
   return <RootLayout>{page}</RootLayout>;
 };
-export const getStaticProps = async () => {
-  // if (typeof window === "undefined") {
-  //   return {
-  //     props: {
-  //       product: [],
-  //     },
-  //   };
-  // }
-  const res = await fetch(`${process.env.URL}/api/products`);
-  const data = await res.json();
+// export const getStaticProps = async () => {
+//   // if (typeof window === "undefined") {
+//   //   return {
+//   //     props: {
+//   //       product: [],
+//   //     },
+//   //   };
+//   // }
+//   const res = await fetch(`${process.env.URL}/api/products`);
+//   const data = await res.json();
 
-  return {
-    props: {
-      products: data.data,
-    },
-    revalidate: 10,
-  };
-};
+//   return {
+//     props: {
+//       products: data.data,
+//     },
+//     revalidate: 10,
+//   };
+// };

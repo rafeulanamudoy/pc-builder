@@ -34,32 +34,34 @@ const FeturedProducts = (props) => {
                 }}
               />
               <h3 className={styles.product_desc}>
-                Product Name:<span> {product.Product_Name}</span>
+                Product Name:<span> {product?.Product_Name}</span>
               </h3>
               <h3 className={styles.product_desc}>
-                Catagory:<span> {product.Category}</span>
+                Catagory:<span> {product?.Category}</span>
               </h3>
               <h3 className={styles.product_desc}>
-                Price:<span> {product.Price}$</span>
+                Price:<span> {product?.Price}$</span>
               </h3>
               <h3 className={styles.product_desc}>
-                Status:<span> {product.Status}</span>
+                Status:<span> {product?.Status}</span>
               </h3>
 
               <h3 className={styles.product_desc}>
-                Rating:<span> {product.AverageRating}</span>
+                Rating:<span> {product?.AverageRating}</span>
               </h3>
 
-              {message === "pcBuilder" ? (
-                <Button onClick={() => handleAdd(product)}>Add</Button>
+              {/* {message === "pcBuilder" ? (
+                <Button onClick={() => handleAdd(product)}>
+                  Add To Builder
+                </Button>
               ) : (
                 <Link
-                  href={`/productDetails/${product._id}`}
+                  href={`/productDetails/${product?._id}`}
                   className={styles.productButton}
                 >
                   Details
                 </Link>
-              )}
+              )} */}
             </div>
           );
         })}
